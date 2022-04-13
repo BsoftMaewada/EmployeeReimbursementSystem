@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.revature.serviceTesting.ReimbursementServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-04T04:31:48" hostname="Buharis-Air" time="4.07">
+  <properties/>
+  <testcase name="getAllReimbursements()" classname="com.revature.serviceTesting.ReimbursementServiceTest" time="4.07"/>
+  <system-out><![CDATA[04 04 2022 - 00:31:52.043 [Test worker] INFO  c.r.service.ReimbursementService - A manager tried to get all the reimbursements
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
