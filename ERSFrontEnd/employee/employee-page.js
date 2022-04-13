@@ -117,7 +117,7 @@ rembursementSubmitBtn.addEventListener("click", async () => {
   try {
     console.log(localStorage.getItem("user_id"));
     let res = await fetch(
-      `http://localhost:8081/employees/${localStorage.getItem(
+      `http://localhost:8080/employees/${localStorage.getItem(
         "user_id"
       )}/reimbursements`,
       {
@@ -136,7 +136,7 @@ rembursementSubmitBtn.addEventListener("click", async () => {
 });
 
 async function populateReimbursementTable() {
-  const URL = `http://localhost:8081/employees/${localStorage.getItem(
+  const URL = `http://localhost:8080/employees/${localStorage.getItem(
     "user_id"
   )}/reimbursements`;
 
@@ -201,7 +201,7 @@ async function populateReimbursementTable() {
       td10.className = "has-text-centered is-vcentered";
 
       let res2 = await fetch(
-        `http://localhost:8081/reimbursements/${reimbursemnt.id}/image`,
+        `http://localhost:8080/reimbursements/${reimbursemnt.id}/image`,
         {
           method: "GET",
         }
@@ -210,7 +210,7 @@ async function populateReimbursementTable() {
         let imgElement = document.createElement("img");
         imgElement.setAttribute(
           "src",
-          `http://localhost:8081/reimbursements/${reimbursemnt.id}/image`
+          `http://localhost:8080/reimbursements/${reimbursemnt.id}/image`
         );
         imgElement.style.height = "200px";
         td10.appendChild(imgElement);

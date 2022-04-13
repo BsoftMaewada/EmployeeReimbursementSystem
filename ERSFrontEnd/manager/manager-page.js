@@ -96,7 +96,7 @@ deniedBtn.addEventListener("click", () => {
 });
 
 async function populateReimbursementTable() {
-  const URL = "http://localhost:8081/reimbursements";
+  const URL = "http://localhost:8080/reimbursements";
 
   let res = await fetch(URL, {
     method: "GET",
@@ -160,7 +160,7 @@ async function populateReimbursementTable() {
       td10.className = "has-text-centered is-vcentered";
 
       let res2 = await fetch(
-        `http://localhost:8081/reimbursements/${reimbursemnt.id}/image`,
+        `http://localhost:8080/reimbursements/${reimbursemnt.id}/image`,
         {
           method: "GET",
         }
@@ -169,7 +169,7 @@ async function populateReimbursementTable() {
         let imgElement = document.createElement("img");
         imgElement.setAttribute(
           "src",
-          `http://localhost:8081/reimbursements/${reimbursemnt.id}/image`
+          `http://localhost:8080/reimbursements/${reimbursemnt.id}/image`
         );
         imgElement.style.height = "200px";
         td10.appendChild(imgElement);
@@ -212,7 +212,7 @@ async function populateReimbursementTable() {
 
           try {
             let res = await fetch(
-              `http://localhost:8081/reimbursements/${reimbursemnt.id}?statusId=${status}`,
+              `http://localhost:8080/reimbursements/${reimbursemnt.id}?statusId=${status}`,
               {
                 method: "PATCH",
                 headers: {
